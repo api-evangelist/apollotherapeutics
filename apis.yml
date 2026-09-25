@@ -1,23 +1,67 @@
 aid: apollotherapeutics
+
 name: Apollotherapeutics
-description: 'Apollotherapeutics is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Apollotherapeutics is a portfolio biopharmaceutical company focused on translating breakthroughs in biology and basic medical research into innovative medicines. With over 20 active therapeutic programs across multiple disease areas, it operates in Cambridge, Oxford, Boston, and Chicago, backed by specialist investors. The company offers a scalable R&D platform and in-licenses clinical-stage programs to accelerate growth.'
+
 url: https://raw.githubusercontent.com/api-evangelist/apollotherapeutics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- Biopharma
+- Portfolio
+- R&D
+- Investors
+- Locations
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/apollotherapeutics-hosts.yml
+- type: TermsOfService
+  url: https://www.apollotx.com/legal-notice/
+- type: PrivacyPolicy
+  url: https://www.apollotx.com/privacy-policy/
+- type: Newsroom
+  url: https://www.apollotx.com/news/
+- type: Leadership
+  url: https://www.apollotx.com/team/
+- type: DomainSecurity
+  url: security/apollotherapeutics-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/apollotherapeutics
+  url: https://www.apollotx.com
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: Apollotherapeutics is a biopharmaceutical company with no public API surface documented.
+  evidence:
+    - url: https://www.apollotx.com
+      status: 200
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
