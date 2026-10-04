@@ -24,8 +24,13 @@ tags:
 - Biopharma
 - Portfolio
 - R&D
+- Investor
+tags_raw:
+- Company
+- Biopharma
+- Portfolio
+- R&D
 - Investors
-- Locations
 
 maintainers:
 - FN: Kin Lane
@@ -65,3 +70,5 @@ x-enrichment:
   artifacts_added: 5
   pass: modular-v1
   engine: identity=local,contract=local,surfaces=local,docs=local
+x-tags-removed:
+- Location
